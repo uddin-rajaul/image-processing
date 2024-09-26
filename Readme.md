@@ -1,52 +1,9 @@
-# Background Removing
-
-- ***Roadmap:***
-    1. Python for Image Processing:
-        - Review Python data structures and file handling
-        - Learn numpy for numerical computing
-        - Explore image processing with Pillow (PIL)
-    
-    1. Image Processing Concepts :
-        - Study color spaces (RGB, HSV, etc.)
-        - Learn about image filtering and edge detection
-        - Understand image segmentation techniques
-    2. Machine Learning Fundamentals :
-        - Introduction to supervised and unsupervised learning
-        - Study classification and regression
-        - Explore popular ML algorithms (decision trees, random forests)
-        - Practice with scikit-learn library
-    3. Deep Learning Basics :
-        - Understand neural networks and their architecture
-        - Learn about convolutional neural networks (CNNs)
-        - Study popular deep learning frameworks (TensorFlow or PyTorch)
-    4. Computer Vision and Image Segmentation:
-        - Explore OpenCV library for computer vision tasks
-        - Learn about semantic segmentation
-        - Study U-Net architecture for image segmentation
-    5. Background Removal Techniques:
-        - Research existing background removal algorithms
-        - Understand alpha matting and trimap generation
-        - Explore GrabCut algorithm for interactive foreground extraction
-    6. Project Development:
-        - Choose a dataset for training and testing
-        - Implement a basic background removal algorithm
-        - Train and fine-tune a deep learning model for segmentation
-        - Develop a user interface for your application
-    7. Testing and Optimization:
-        - Evaluate your model's performance
-        - Optimize for speed and accuracy
-        - Gather user feedback and make improvements
-    8. Deployment:
-        - Learn about model deployment options
-        - Choose a platform (web, mobile, or desktop)
-        - Deploy your application
-- ***Python Library i need to learn first:***
-    - NumPy
-    - Pillow (PIL)
-    - OpenCV
-    - scikit-learn
-    - TensorFlow or PyTorch
-    
+- **_Python Library i need to learn first:_**
+  - NumPy
+  - Pillow (PIL)
+  - OpenCV
+  - scikit-learn
+  - TensorFlow or PyTorch
 
 ![image.png](Background%20Removing%201047ab64f9e180e68633ca5c62b436f8/image.png)
 
@@ -145,7 +102,7 @@ Each algorithm uses different techniques to learn patterns from data and make pr
 
 ![image.png](Background%20Removing%201047ab64f9e180e68633ca5c62b436f8/image%202.png)
 
-With supervised learning, the data that the network is trained on is labeled, whereas with unsupervised learning, the data is unlabeled. 
+With supervised learning, the data that the network is trained on is labeled, whereas with unsupervised learning, the data is unlabeled.
 
 ![image.png](Background%20Removing%201047ab64f9e180e68633ca5c62b436f8/image%203.png)
 
@@ -186,9 +143,9 @@ With supervised learning, the data that the network is trained on is labeled, wh
 ### 3. **Tanh (Hyperbolic Tangent)**
 
 - **Formula:**
-    
-    ![image.png](Background%20Removing%201047ab64f9e180e68633ca5c62b436f8/image%206.png)
-    
+
+  ![image.png](Background%20Removing%201047ab64f9e180e68633ca5c62b436f8/image%206.png)
+
 - **Range:** (-1, 1)
 - **Use case:** Useful for hidden layers where negative values are needed.
 - **Pros:** Centers output around zero, better for learning compared to Sigmoid.
@@ -205,9 +162,9 @@ With supervised learning, the data that the network is trained on is labeled, wh
 ### 5. **Softmax**
 
 - **Formula:**
-    
-    ![image.png](Background%20Removing%201047ab64f9e180e68633ca5c62b436f8/image%207.png)
-    
+
+  ![image.png](Background%20Removing%201047ab64f9e180e68633ca5c62b436f8/image%207.png)
+
 - **Range:** (0, 1), where all outputs sum to 1.
 - **Use case:** Used for multi-class classification to output probabilities for different classes.
 - **Pros:** Provides a probability distribution across multiple classes.
@@ -216,9 +173,9 @@ With supervised learning, the data that the network is trained on is labeled, wh
 ### 6. **Swish**
 
 - **Formula:**
-    
-    ![image.png](Background%20Removing%201047ab64f9e180e68633ca5c62b436f8/image%208.png)
-    
+
+  ![image.png](Background%20Removing%201047ab64f9e180e68633ca5c62b436f8/image%208.png)
+
 - **Range:** (-∞, ∞)
 - **Use case:** Developed by Google, Swish is gaining popularity as it can outperform ReLU in some tasks.
 - **Pros:** Smooth, non-linear, and differentiable.
@@ -227,9 +184,9 @@ With supervised learning, the data that the network is trained on is labeled, wh
 ### 7. **ELU (Exponential Linear Unit)**
 
 - **Formula:**
-    
-    ![image.png](Background%20Removing%201047ab64f9e180e68633ca5c62b436f8/image%209.png)
-    
+
+  ![image.png](Background%20Removing%201047ab64f9e180e68633ca5c62b436f8/image%209.png)
+
 - **Range:** (-α, ∞), where α is a hyperparameter.
 - **Use case:** Similar to ReLU but allows for smoother and faster convergence.
 - **Pros:** Reduces the vanishing gradient problem.
@@ -263,11 +220,11 @@ what is CNN/ Convolutional Neural Network (CNN)?
 
 ![image.png](Background%20Removing%201047ab64f9e180e68633ca5c62b436f8/image%2010.png)
 
-| Layer | Number of Nodes |
-| --- | --- |
-| Input layer | Must have one node for each component/feature of the input data |
+| Layer         | Number of Nodes                                                                 |
+| ------------- | ------------------------------------------------------------------------------- |
+| Input layer   | Must have one node for each component/feature of the input data                 |
 | Hidden layers | Number of nodes is chosen (arbitrarily or empirically) by the network architect |
-| Output layer | Must have one node for each of the possible output classes |
+| Output layer  | Must have one node for each of the possible output classes                      |
 
 ## **Key Components of a CNN**
 
@@ -322,9 +279,9 @@ The more convolution layers the network has, the better the layer is at detectin
 - applying some aggregation operations, which reduce the dimension of the feature map (convoluted matrix), hence reducing the memory used while training the network
 - mitigate overfitting.
 - The most common aggregation functions that can be applied are:
-    - Max pooling, which is the maximum value of the feature map
-    - Sum pooling corresponds to the sum of all the values of the feature map
-    - Average pooling is the average of all the values.
+  - Max pooling, which is the maximum value of the feature map
+  - Sum pooling corresponds to the sum of all the values of the feature map
+  - Average pooling is the average of all the values.
 
 ![image.png](Background%20Removing%201047ab64f9e180e68633ca5c62b436f8/image%2014.png)
 
@@ -359,7 +316,7 @@ The weights for the 1D line of numbers are determined during the training proces
 
 - U-Net is a convolutional neural network designed for biomedical image segmentation.
 - It relies on a contracting path to capture context and a symmetric expanding path for precise localization.
-- It is built upon FCN(Fully Convolutional Networks)  and modified in a way that it yields better segmentation in medical imaging.
+- It is built upon FCN(Fully Convolutional Networks) and modified in a way that it yields better segmentation in medical imaging.
 - U-Net is trained end-to-end from few images and outperforms previous methods in segmenting neural structures.
 - The network is fast, taking less than a second to segment a 512x512 image on a recent GPU.
 
